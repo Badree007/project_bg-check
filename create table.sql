@@ -52,13 +52,15 @@ INSERT INTO inquiry(user_id, subject, message)
 	(3, "Photo Card", "Hello, I have applied for my address verification couple days ago. I now realize that the photo id I have provided is wrong. I mistakenly put my brother's id. Is it possible to change it now?");
 
 INSERT INTO users( username, email, `password`)
-	VALUES ("badree", "tut_project1@gmail.com", '$2y$10$123837073030000999999uOuK3y93L93VMMOuY7NLPrzDV4GcFQD6'),
+	VALUES ("badree", "tut_project1@gmail.com", '$2y$10$SfGoP/hnFaB114Fe3N0mMuGB8KJGvBqTAhvCAAJvSTcF59K4amyqy'),
 	("admin", "admin_project2@gmail.com", "$2y$10$BIW6Gbf4BwQi9o4wgTEYaeGOJOajE/zzvKOyW8rAgmK6RegVzqp4K"),
-	("Sarkar", "sarkar_project1@gmail.com", '$2y$10$123837073030000999999uOuK3y93L93VMMOuY7NLPrzDV4GcFQD6'),
-	("Martha", "mar_project1@gmail.com", '$2y$10$123837073030000999999uOuK3y93L93VMMOuY7NLPrzDV4GcFQD6');
+	("Sarkar", "sarkar_project1@gmail.com", '$2y$10$SfGoP/hnFaB114Fe3N0mMuGB8KJGvBqTAhvCAAJvSTcF59K4amyqy'),
+	("Martha", "mar_project1@gmail.com", '$2y$10$SfGoP/hnFaB114Fe3N0mMuGB8KJGvBqTAhvCAAJvSTcF59K4amyqy');
+	-- $2y$10$SfGoP/hnFaB114Fe3N0mMuGB8KJGvBqTAhvCAAJvSTcF59K4amyqy
+	-- $2y$10$123837073030000999999uOuK3y93L93VMMOuY7NLPrzDV4GcFQD6
 
 
-INSERT INTO user_details( u_id, fname, lname, gender, address)
+INSERT INTO user_details( u_id, fname, lname, birthday, gender, address)
 	VALUES (1, "Badree", "Dahal", "1999-02-26", "male", "266 marrickville rd, Marrickville, 2204 NSW"),
 	(3, "Sarkar", " ", "1995-10-12", "male", "10 George St, Clyde, 2140 NSW"),
 	(4, "Martha", "FAR","1997-07-22" "female", "7 Russel St, Strathfield, 2503 NSW");
