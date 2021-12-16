@@ -292,7 +292,7 @@ function saveDetails() {
 function verifyAddress(postcode) {
   const proxy = "https://cors-anywhere.herokuapp.com/";
   // https://australianaddresses.net.au/d?q=${address}
-  return fetch(`http://v0.postcodeapi.com.au/suburbs/${postcode}.json`, {
+  return fetch(`https://v0.postcodeapi.com.au/suburbs/${postcode}.json`, {
     headers: {
       "Content-type": "application/json",
     },
