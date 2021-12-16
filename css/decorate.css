@@ -1,4 +1,4 @@
-@import url("https://fonts.cdnfonts.com/css/brittany-signature");
+/* @import url("https://fonts.cdnfonts.com/css/brittany-signature"); */
 
 * {
   margin: 0;
@@ -588,6 +588,6 @@ footer {
 
 .signature {
   border-bottom: dotted;
-  font-family: "Brittany Signature", sans-serif;
+  font-family: cursive, sans-serif;
   font-size: 24px;
 }
