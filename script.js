@@ -251,13 +251,17 @@ function saveDetails() {
 
     verifyAddress(postcodeVal).then((data) => {
       console.log(data);
-      for (const val of data) {
-        if (val.name == cityVal) {
-          console.log("Match");
-          verify = true;
-        } else {
-          console.log("No match");
+      if (data) {
+        for (const val of data) {
+          if (val.name == cityVal) {
+            console.log("Match");
+            verify = true;
+          } else {
+            console.log("No match");
+          }
         }
+      } else {
+        console.log("Data not found, Fetch error");
       }
     });
 
