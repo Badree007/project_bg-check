@@ -1,0 +1,3 @@
+# Project (Address Verify)
+
+This project is based on address verification API validating addresses of the user and providing them with reports. It has two interfaces, i.e. Admin and User. All users have to signup first inorder to get into the application window. When users are registered, they can lodge appications, view their applications history and reports on approval by Admin, and contact Admin. While Admin can view all the applications of all users, get their address verifiation status which is done by API, reject or approve any application, and view messages from users. This is the whole scenario of this application. 
