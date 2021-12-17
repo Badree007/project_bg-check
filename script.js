@@ -299,7 +299,11 @@ function verifyAddress(postcode) {
   return fetch(`https://v0.postcodeapi.com.au/suburbs/${postcode}.json`, {
     headers: {
       "Content-type": "application/json",
+      "Accept": "application/json",
+      "Allow-Control-Allow-Origin": 'https://project-bg-check.herokuapp.com/',
+      "Access-Control-Allow-Credentials": "true"
     },
+    mode: 'cors',
   })
     .then((response) => {
       return response.json();
