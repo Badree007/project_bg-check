@@ -29,7 +29,7 @@
 
 		$address = $stno.' '. $stname.', '.$city.', '.$postcode.', '. $state;
 
-		$sql = "INSERT INTO user_details (u_id, fname, lname, birthday, gender, address) VALUES (?, ?, ?, ?, ?, ?);";
+		$sql = "INSERT INTO `user_details` (`u_id`, `fname`, `lname`, `birthday`, `gender`, `address`) VALUES (?, ?, ?, ?, ?, ?);";
 		$stmt = mysqli_stmt_init($conn);
 		
 		// try {
@@ -57,17 +57,17 @@
 				mysqli_query($conn, $query);	
 			}
 
-			$query = "INSERT INTO background_checks (detail_id, bg_status) Values (".$last_id.", ". $verify .");";
+			$query = "INSERT INTO `background_checks` (`detail_id`, `bg_status`) Values (".$last_id.", ". $verify .");";
 			$queryconn = mysqli_query($conn, $query);
 
-			$query1 = "SELECT * FROM user_details WHERE id =" . $last_id .";";
+			$query1 = "SELECT * FROM `user_details` WHERE id =" . $last_id .";";
 			$queryconn1 = mysqli_query($conn, $query1);
 
 			$items = mysqli_fetch_assoc($queryconn1);
-
+			
 			mysqli_close($conn);
-
 			echo json_encode($items);
+
 		}
 		else {
 			// If there is an error we send the user back to the signup page.
