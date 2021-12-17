@@ -300,7 +300,7 @@ function verifyAddress(postcode) {
     headers: {
       "Content-type": "application/json",
       "Accept": "application/json",
-      "Allow-Control-Allow-Origin": 'https://project-bg-check.herokuapp.com/',
+      "Allow-Control-Allow-Origin": '*',
       "Access-Control-Allow-Credentials": "true"
     },
     mode: 'cors',
