@@ -298,9 +298,11 @@ function saveDetails() {
 
 function verifyAddress(postcode) {
   return fetch(`https://api-postcode.herokuapp.com/address_api.json/?pcode=${postcode}`, {
+    method: 'GET',
+    mode: 'cors',
+    credentials: 'include',
     headers: {
       "Content-type": "application/json",
-      "Access-Control-Allow-Origin": "*",
     }
   })
     .then((response) => {
