@@ -1,10 +1,7 @@
 admin();
 showPage();
 login_signup();
-// saveDetails();
-verifyAddress(2000).then((data) => {
-  console.log(data);
-});
+saveDetails();
 imagePreview();
 
 function admin() {
@@ -255,8 +252,8 @@ function saveDetails() {
     verifyAddress(postcodeVal).then((data) => {
       console.log(data);
       if (data) {
-        for (const val of data) {
-          if (val.name == cityVal) {
+        for (const val of data.cities) {
+          if (val == cityVal) {
             console.log("Match");
             verify = true;
           } else {
