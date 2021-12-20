@@ -57,13 +57,14 @@
 				mysqli_query($conn, $query);	
 			}
 
-			$query = "INSERT INTO `background_checks` (`detail_id`, `bg_status`) Values (".$last_id.", ". $verify .");";
-			$queryconn = mysqli_query($conn, $query);
+			$query1 = "INSERT INTO `background_checks` (`detail_id`, `bg_status`) 
+						Values(".$last_id.", ". $verify .");";
+			$queryconn = mysqli_query($conn, $query1);
 
-			$query1 = "SELECT * FROM `user_details` WHERE id =" . $last_id .";";
-			$queryconn1 = mysqli_query($conn, $query1);
+			$query2 = "SELECT * FROM `user_details` WHERE id =" . $last_id .";";
+			$queryconn2 = mysqli_query($conn, $query2);
 
-			$items = mysqli_fetch_assoc($queryconn1);
+			$items = mysqli_fetch_assoc($queryconn2);
 			
 			mysqli_close($conn);
 			echo json_encode($items);

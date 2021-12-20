@@ -294,16 +294,10 @@ function saveDetails() {
 }
 
 function verifyAddress(postcode) {
-  const proxy = "https://cors-anywhere.herokuapp.com/";
-  // https://australianaddresses.net.au/d?q=${address}
-  return fetch(`https://v0.postcodeapi.com.au/suburbs/${postcode}.json`, {
+  return fetch(`https://api-postcode.herokuapp.com/address_api.json/?pcode=${postcode}`, {
     headers: {
       "Content-type": "application/json",
-      "Accept": "application/json",
-      "Allow-Control-Allow-Origin": '*',
-      "Access-Control-Allow-Credentials": "true"
-    },
-    mode: 'cors',
+    }
   })
     .then((response) => {
       return response.json();
