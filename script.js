@@ -2,7 +2,9 @@ admin();
 showPage();
 login_signup();
 // saveDetails();
-verifyAddress(2000);
+verifyAddress(2000).then((data) => {
+  console.log(data);
+});
 imagePreview();
 
 function admin() {
