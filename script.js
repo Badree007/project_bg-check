@@ -1,7 +1,8 @@
 admin();
 showPage();
 login_signup();
-saveDetails();
+// saveDetails();
+verifyAddress(2000);
 imagePreview();
 
 function admin() {
