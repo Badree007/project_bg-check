@@ -256,6 +256,7 @@ function saveDetails() {
           if (val == cityVal) {
             console.log("Match");
             verify = true;
+            break;
           } else {
             console.log("No match");
           }
@@ -287,35 +288,7 @@ function saveDetails() {
       });
 
       xhr.send(formData);
-    }
-
-    );
-
-    // setTimeout(function () {
-    //   if (verify) {
-    //     formData.append("addressVerify", "success");
-    //   } else {
-    //     formData.append("addressVerify", "fail");
-    //   }
-
-    //   let xhr = new XMLHttpRequest();
-    //   xhr.open("POST", "includes/save-details.inc.php", true);
-
-    //   xhr.addEventListener("load", function () {
-    //     if (xhr.status === 200) {
-    //       console.log("Data saved");
-    //       formCheck.reset();
-    //       errorField.textContent = "Data saved. Thanks for applying!";
-    //       errorField.style.color = "green";
-    //     } else if (xhr.status !== 200) {
-    //       console.log("Request failed.  Returned status of " + xhr.status);
-    //       errorField.textContent = `Data failed to be saved. ${xhr.status}, Contact Admin.`;
-    //       errorField.style.color = "red";
-    //     }
-    //   });
-
-    //   xhr.send(formData);
-    // }, 1000);
+    })
   });
 }
 

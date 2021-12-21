@@ -8,10 +8,5 @@ order allow,deny
 deny from all
 </Files>
 
-<IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*" 
-    Header set Access-Control-Allow-Credentials true
-</IfModule>
-
 # Prevent directory listings
 Options All -Indexes
